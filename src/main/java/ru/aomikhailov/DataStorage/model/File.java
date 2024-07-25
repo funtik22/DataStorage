@@ -7,6 +7,7 @@ import jakarta.persistence.Table;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Base64;
 
 @Getter
@@ -19,7 +20,7 @@ public class File {
     @GeneratedValue
     private Long id;
     private String title;
-    private LocalDate creation_date;
+    private LocalDateTime creation_date;
     private String description;
     private String fileBase64;
 }
