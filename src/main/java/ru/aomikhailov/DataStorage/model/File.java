@@ -1,9 +1,6 @@
 package ru.aomikhailov.DataStorage.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -20,7 +17,9 @@ public class File {
     @GeneratedValue
     private Long id;
     private String title;
-    private LocalDateTime creation_date;
+
+    private LocalDateTime creation = LocalDateTime.now();
     private String description;
     private String fileBase64;
+
 }
