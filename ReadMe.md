@@ -2,6 +2,7 @@
 Microservice for storing files in base64 format. 
 Uses Spring boot and PostgreSQL
 ## Build and Run
+Docker:
 ```./gradlew bootJar```\
 ```docker-compose up -d --build```\
 Run in your environment:\
