@@ -11,5 +11,7 @@ services:
   app:
     build: ./
     container_name: "java-app"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/data_storage
     ports:
       - 8080:8080
