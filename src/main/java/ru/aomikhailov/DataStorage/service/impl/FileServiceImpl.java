@@ -29,7 +29,7 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public List<File> getAllFiles(PageRequest pageRequest) {
-        Page<File> page = repository.findAll(pageRequest.withSort(Sort.by("creation")));
+        Page<File> page = repository.findAll(pageRequest);
         return page.getContent();
     }
 }

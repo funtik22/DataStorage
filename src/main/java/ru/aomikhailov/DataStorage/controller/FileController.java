@@ -3,6 +3,7 @@ package ru.aomikhailov.DataStorage.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 import ru.aomikhailov.DataStorage.model.File;
 import ru.aomikhailov.DataStorage.service.FileService;
@@ -30,6 +31,6 @@ public class FileController {
     public List<File> getAllFiles(
             @RequestParam(required = false, defaultValue = "0") int page,
             @RequestParam(required = false, defaultValue = "10") int size) {
-        return service.getAllFiles(PageRequest.of(page, size));
+        return service.getAllFiles(PageRequest.of(page, size, Sort.Direction.ASC, "creation"));
     }
 }

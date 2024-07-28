@@ -3,13 +3,13 @@ package ru.aomikhailov.DataStorage.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Base64;
 
+@Builder
 @Getter
 @Setter
 @RequiredArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "Files")
 public class File {
@@ -17,7 +17,7 @@ public class File {
     @GeneratedValue
     private Long id;
     private String title;
-
+    @Builder.Default
     private LocalDateTime creation = LocalDateTime.now();
     private String description;
     private String fileBase64;

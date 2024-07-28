@@ -10,5 +10,4 @@ public class DataStorageApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DataStorageApplication.class, args);
 	}
-
 }
